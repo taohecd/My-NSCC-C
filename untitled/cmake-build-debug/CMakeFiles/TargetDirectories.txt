@@ -1,0 +1,3 @@
+D:/msys64/home/snail/untitled/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/msys64/home/snail/untitled/cmake-build-debug/CMakeFiles/untitled.dir
+D:/msys64/home/snail/untitled/cmake-build-debug/CMakeFiles/rebuild_cache.dir
