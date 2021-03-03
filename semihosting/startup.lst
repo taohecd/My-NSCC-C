@@ -1,0 +1,91 @@
+ARM GAS  startup.s 			page 1
+
+
+   1              	
+   2              	        .cpu cortex-m0plus
+   3              	        .syntax unified
+   4              	        .thumb
+   5              	        .fpu softvfp
+   6              	
+   7              	        .global _vectors, _start
+   8              	
+   9              	        .section .vectors
+  10              	        .align 2
+  11              	
+  12              	        .type _vectors, %object
+  13              	_vectors:
+  14 0000 00000000 	        .long _stack_top
+  15 0004 00000000 	        .long _start
+  16              	
+  17 0008 00000000 	        .long 0
+  18 000c 00000000 	        .long 0
+  19 0010 00000000 	        .long 0
+  20 0014 00000000 	        .long 0
+  21 0018 00000000 	        .long 0
+  22 001c 00000000 	        .long 0
+  23 0020 00000000 	        .long 0
+  24 0024 00000000 	        .long 0
+  25 0028 00000000 	        .long 0
+  26 002c 00000000 	        .long 0
+  27 0030 00000000 	        .long 0
+  28 0034 00000000 	        .long 0
+  29 0038 00000000 	        .long 0
+  30 003c 00000000 	        .long 0
+  31 0040 00000000 	        .long 0
+  32 0044 00000000 	        .long 0
+  33 0048 00000000 	        .long 0
+  34 004c 00000000 	        .long 0
+  35 0050 00000000 	        .long 0
+  36 0054 00000000 	        .long 0
+  37 0058 00000000 	        .long 0
+  38 005c 00000000 	        .long 0
+  39 0060 00000000 	        .long 0
+  40 0064 00000000 	        .long 0
+  41 0068 00000000 	        .long 0
+  42 006c 00000000 	        .long 0
+  43 0070 00000000 	        .long 0
+  44 0074 00000000 	        .long 0
+  45 0078 00000000 	        .long 0
+  46 007c 00000000 	        .long 0
+  47 0080 00000000 	        .long 0
+  48 0084 00000000 	        .long 0
+  49 0088 00000000 	        .long 0
+  50 008c 00000000 	        .long 0
+  51 0090 00000000 	        .long 0
+  52 0094 00000000 	        .long 0
+  53 0098 00000000 	        .long 0
+  54 009c 00000000 	        .long 0
+  55 00a0 00000000 	        .long 0
+  56 00a4 00000000 	        .long 0
+  57 00a8 00000000 	        .long 0
+ARM GAS  startup.s 			page 2
+
+
+  58 00ac 00000000 	        .long 0
+  59 00b0 00000000 	        .long 0
+  60 00b4 00000000 	        .long 0
+  61 00b8 00000000 	        .long 0
+  62 00bc 00000000 	        .long 0
+  63              	
+  64              	        .size _vectors, . - _vectors
+  65              	
+  66              	        .text
+  67              	        .align 1
+  68              	
+  69              	        .type _start, %function
+  70              	_start:
+  71 0000 FEE7     	        b main
+  72              	
+  73              	        .end
+ARM GAS  startup.s 			page 3
+
+
+DEFINED SYMBOLS
+           startup.s:13     .vectors:00000000 _vectors
+           startup.s:70     .text:00000000 _start
+           startup.s:10     .vectors:00000000 $d
+           startup.s:67     .text:00000000 $t
+
+UNDEFINED SYMBOLS
+_stack_top
+main
